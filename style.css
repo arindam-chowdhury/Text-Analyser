@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;  
+}
+
+body{
+    background:#f7f7f7;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.container{
+    width: 50%;
+    margin: 3rem auto;
+}
+.container-box{
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 0 #333;
+}
+.container-left{
+    flex-basis: 60%;
+    padding: 2rem 3rem;
+}
+.container-right{
+    flex-basis: 40%;
+    padding: 2rem;
+    background: red;
+    color: #fff;
+    border-radius: 10px;
+}
+.container-left h3{
+    color: red;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.container-right h3{
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+}
+span {
+    display: block;
+    max-width: 23vw;
+    max-height: 50vh;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 1rem;
+    overflow-x:hidden;
+}
+span[contenteditable]:empty::before {
+    content: 'Enter a String';
+}
+table{
+    color: #fff;
+}
+tr td:first-child{
+    padding-right: 2.5rem;
+}
+tr td{
+    padding-bottom: 0.5rem;
+}
+
+/* mobile view port styling */
+@media screen and (max-width: 450px) {
+    .container {
+        width: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    h1{
+        display: flex;
+        justify-content: center;
+    }
+    .container-box{
+        flex-direction: column;
+    }
+    .container-left{
+        padding: 3rem 1.5rem;
+    }
+    span{
+        max-width: inherit;
+    }
+}
